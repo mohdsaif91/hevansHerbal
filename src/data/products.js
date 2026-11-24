@@ -1,7 +1,31 @@
 ﻿
 import page_1_img_1 from "../assets/products/page_1_img_1.webp"
+import page_1_img_2 from "../assets/products/page_1_img_2.jpg"
+import page_1_img_3 from "../assets/products/page_1_img_3.jpg"
+import page_1_img_4 from "../assets/products/page_1_img_4.png"
+import page_1_img_5 from "../assets/products/page_1_img_5.png"
+import page_1_img_6 from "../assets/products/page_1_img_6.png"
+import page_1_img_7 from "../assets/products/page_1_img_7.png"
+import page_1_img_8 from "../assets/products/page_1_img_8.jpg"
+import page_1_img_9 from "../assets/products/page_1_img_9.png"
+import page_1_img_10 from "../assets/products/page_1_img_10.jpg"
+import page_1_img_11 from "../assets/products/page_1_img_11.jpg"
+import page_1_img_12 from "../assets/products/page_1_img_12.jpg"
 
-export const products = [
+import page_2_img_1 from "../assets/products/page_2_img_1.jpg"
+import page_2_img_2 from "../assets/products/page_2_img_2.jpg"
+import page_2_img_3 from "../assets/products/page_2_img_3.jpg"
+import page_2_img_4 from "../assets/products/page_2_img_4.jpg"
+import page_2_img_5 from "../assets/products/page_2_img_5.jpg"
+import page_2_img_6 from "../assets/products/page_2_img_6.jpg"
+import page_2_img_7 from "../assets/products/page_2_img_7.png"
+import page_2_img_8 from "../assets/products/page_2_img_8.webp"
+import page_2_img_9 from "../assets/products/page_2_img_9.jpg"
+import page_2_img_10 from "../assets/products/page_2_img_10.jpg"
+import page_2_img_11 from "../assets/products/page_2_img_11.png"
+import page_2_img_12 from "../assets/products/page_2_img_12.jpg"
+
+const page_1_products = [
     {
         "id": "10-pack-three-kings-charcoal",
         "slug": "10-pack-three-kings-charcoal",
@@ -21,7 +45,7 @@ export const products = [
         "name": "100% Original \u0026 Natural Parad (Mercury) Gutika",
         "price": 75,
         "description": "",
-        "image": "",
+        "image": page_1_img_2,
         "category": "Parad (Mercury) Products",
         "symbol": "",
         "art": "cream",
@@ -34,7 +58,7 @@ export const products = [
         "name": "100x Poweful Copper Vastu Pyramid Set – 4 Inch Vastu Remedies for Positive Vastu Energy Vibrations at Home, Office, Factory, Plot",
         "price": 90,
         "description": "",
-        "image": "",
+        "image": page_1_img_3,
         "category": "Copper Products",
         "symbol": "",
         "art": "cream",
@@ -47,7 +71,7 @@ export const products = [
         "name": "11 Mukhi Nepali Rudraksha Collector Bead with Lab Certificate and X-Ray Report – RM1",
         "price": 149,
         "description": "",
-        "image": "",
+        "image": page_1_img_4,
         "category": "Nepali Rudraksha",
         "symbol": "",
         "art": "cream",
@@ -60,7 +84,7 @@ export const products = [
         "name": "11 Mukhi Nepali Rudraksha Collector Bead with Lab Certificate and X-Ray Report – RM4",
         "price": 110,
         "description": "",
-        "image": "",
+        "image": page_1_img_5,
         "category": "Nepali Rudraksha",
         "symbol": "",
         "art": "cream",
@@ -73,7 +97,7 @@ export const products = [
         "name": "11 Mukhi Nepali Rudraksha Collector Bead with Lab Certificate and X-Ray Report – RM6",
         "price": 149,
         "description": "",
-        "image": "",
+        "image": page_1_img_6,
         "category": "Nepali Rudraksha",
         "symbol": "",
         "art": "cream",
@@ -86,7 +110,7 @@ export const products = [
         "name": "11 Mukhi Nepali Rudraksha Collector Bead with Lab Certificate and X-Ray Report – RM7",
         "price": 149,
         "description": "",
-        "image": "",
+        "image": page_1_img_7,
         "category": "Nepali Rudraksha",
         "symbol": "",
         "art": "cream",
@@ -99,7 +123,7 @@ export const products = [
         "name": "2 Red Porcelain Running Horses",
         "price": 40,
         "description": "",
-        "image": "",
+        "image": page_1_img_8,
         "category": "Feng Shui Remedies",
         "symbol": "",
         "art": "cream",
@@ -112,7 +136,7 @@ export const products = [
         "name": "2 White Porcelain Running Horses",
         "price": 42,
         "description": "",
-        "image": "",
+        "image": page_1_img_9,
         "category": "Feng Shui Remedies",
         "symbol": "â™ž",
         "art": "cream",
@@ -125,7 +149,7 @@ export const products = [
         "name": "22 Archangels Oracle",
         "price": 18.99,
         "description": "",
-        "image": "",
+        "image": page_1_img_10,
         "category": "Oracle Cards",
         "symbol": "",
         "art": "cream",
@@ -138,7 +162,7 @@ export const products = [
         "name": "3D Angel Wings Heart Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_1_img_11,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
@@ -151,20 +175,23 @@ export const products = [
         "name": "3D Buddha Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_1_img_12,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
         "page": 1,
         "pagePosition": 12
     },
+]
+
+const page_2_products = [
     {
         "id": "3d-butterly-himalayan-salt-lamp",
         "slug": "3d-butterly-himalayan-salt-lamp",
         "name": "3D Butterly Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_2_img_1,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
@@ -177,7 +204,7 @@ export const products = [
         "name": "3D Dream Catcher Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_2_img_2,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
@@ -190,7 +217,7 @@ export const products = [
         "name": "3D Hamsa Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_2_img_3,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
@@ -203,7 +230,7 @@ export const products = [
         "name": "3D Pentacle Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_2_img_4,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
@@ -216,7 +243,7 @@ export const products = [
         "name": "3D Tree of Life Celtic Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_2_img_5,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
@@ -229,7 +256,7 @@ export const products = [
         "name": "3D Tree of Life Himalayan Salt Lamp",
         "price": 64.99,
         "description": "",
-        "image": "",
+        "image": page_2_img_6,
         "category": "HIMALAYAN SALT",
         "symbol": "",
         "art": "cream",
@@ -242,7 +269,7 @@ export const products = [
         "name": "9 Mukhi Nepali Rudraksha Collector Bead with Lab Certificate and X-Ray Report",
         "price": 103,
         "description": "",
-        "image": "",
+        "image": page_2_img_7,
         "category": "Nepali Rudraksha",
         "symbol": "",
         "art": "cream",
@@ -255,7 +282,7 @@ export const products = [
         "name": "Aleister Crowley Tarot Book \u0026 Card Deck",
         "price": 32.95,
         "description": "",
-        "image": "",
+        "image": page_2_img_8,
         "category": "Tarot Cards",
         "symbol": "",
         "art": "cream",
@@ -268,7 +295,7 @@ export const products = [
         "name": "All Seeing Heart Oracle",
         "price": 26.95,
         "description": "",
-        "image": "",
+        "image": page_2_img_9,
         "category": "Oracle Cards",
         "symbol": "",
         "art": "cream",
@@ -281,7 +308,7 @@ export const products = [
         "name": "Amazonian Angel Oracle",
         "price": 37.5,
         "description": "",
-        "image": "",
+        "image": page_2_img_10,
         "category": "Oracle Cards",
         "symbol": "",
         "art": "cream",
@@ -294,7 +321,7 @@ export const products = [
         "name": "Amber Moon Witch’s Brew Candle Small",
         "price": 23.25,
         "description": "",
-        "image": "",
+        "image": page_2_img_11,
         "category": "Witch\u0027s Brew Candles",
         "symbol": "",
         "art": "cream",
@@ -307,13 +334,18 @@ export const products = [
         "name": "Anatomy of a Witch Oracle",
         "price": 34.99,
         "description": "",
-        "image": "",
+        "image": page_2_img_12,
         "category": "Oracle Cards",
         "symbol": "",
         "art": "cream",
         "page": 2,
         "pagePosition": 12
     },
+]
+
+export const products = [
+    ...page_1_products,
+    ...page_2_products,
     {
         "id": "angel-connections-message-cards",
         "slug": "angel-connections-message-cards",

@@ -11,16 +11,20 @@ export function ProductArtwork({ product, compact = false }) {
 }
 
 export default function ProductCard({ product, onAdd }) {
+  console.log(product.price, ' <>?');
+
   return (
     <article className="product-card">
       <Link className="product-image-link" to={`/product/${product.slug}/`} aria-label={`View ${product.name}`}>
-        <ProductArtwork product={product} />
+        {product.image != "" ? <img src={product.image} alt={product.name} style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} /> :
+          <ProductArtwork product={product} />
+        }
       </Link>
       <div className="product-card-info">
         <span className="product-category">{product.category}</span>
         <h3><Link to={`/product/${product.slug}/`}>{product.name}</Link></h3>
         <div className="product-card-bottom">
-          <span className="product-price">${product.price.toFixed(2)}</span>
+          <span className="product-price">${product.price && product.price.toFixed(2)}</span>
           <button type="button" className="add-button" onClick={() => onAdd(product)} aria-label={`Add ${product.name} to cart`}>
             Add to cart <span aria-hidden="true">+</span>
           </button>
