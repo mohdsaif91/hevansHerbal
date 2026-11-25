@@ -17,9 +17,10 @@ export default function ContactPage() {
       </section>
       <section className="section contact-section">
         <div className="contact-intro">
-          <p className="eyebrow">CONTACT MATRIX WELLNESS</p>
+          <p className="eyebrow">CONTACT HERBAL HEAVEN</p>
           <h2>What can we help you find?</h2>
           <p>Use the form to share a question about an item or your shopping experience.</p>
+          <p>Email us at <a className="text-link" href="mailto:dattapawar@myyahoo.com">dattapawar@myyahoo.com</a>.</p>
           <p className="notice">This demonstration form is not connected to the business and does not send your message.</p>
         </div>
         {submitted ? (

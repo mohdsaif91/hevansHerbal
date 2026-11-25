@@ -59,12 +59,45 @@
 }
 
 .header-search {
+  position: relative;
   display: flex;
   align-items: center;
   width: min(230px, 22vw);
   height: 42px;
   margin-left: auto;
   border-bottom: 1px solid rgba(20, 20, 20, 0.4);
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  width: max(100%, 300px);
+  max-height: 320px;
+  margin: 0;
+  padding: 4px 0;
+  overflow-y: auto;
+  list-style: none;
+  background: #fff;
+  border: 1px solid rgba(20, 20, 20, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.search-suggestions a,
+.search-empty {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.search-suggestions a:hover,
+.search-suggestions a:focus {
+  background: rgba(36, 87, 214, 0.08);
+  color: var(--blue);
 }
 
 .header-search input,
@@ -950,6 +983,21 @@
 
 .legal-section {
   min-height: 250px;
+}
+
+.legal-block {
+  max-width: 780px;
+  margin: 0 auto 28px;
+}
+
+.legal-block h2 {
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
+
+.legal-block p {
+  line-height: 1.7;
+  margin: 0;
 }
 
 .legal-notice {

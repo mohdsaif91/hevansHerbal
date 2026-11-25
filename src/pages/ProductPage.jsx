@@ -6,7 +6,15 @@ export default function ProductPage({ product, onAdd }) {
     <main>
       <div className="breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/shop-2/">Shop</Link><span>/</span><span>{product.name}</span></div>
       <section className="product-detail">
-        <ProductArtwork product={product} />
+        {product.image != "" ?
+          <img src={product.image} alt={product.name}
+            style={{
+              display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'
+            }}
+          />
+          :
+          <ProductArtwork product={product} />
+        }
         <div className="product-detail-copy">
           <p className="eyebrow">{product.category}</p>
           <h1>{product.name}</h1>

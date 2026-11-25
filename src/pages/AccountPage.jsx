@@ -4,7 +4,7 @@ export default function AccountPage() {
   return (
     <main>
       <section className="page-banner compact-banner">
-        <p className="eyebrow">MATRIX WELLNESS</p>
+        <p className="eyebrow">HERBAL HEAVEN</p>
         <h1>Your <em>account.</em></h1>
       </section>
       <section className="section account-section">

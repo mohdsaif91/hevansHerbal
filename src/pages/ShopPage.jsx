@@ -19,7 +19,7 @@ export default function ShopPage({ products, onAdd }) {
   return (
     <main>
       <section className="page-banner shop-banner">
-        <p className="eyebrow">THE MATRIX COLLECTION</p>
+        <p className="eyebrow">THE HERBAL HEAVEN COLLECTION</p>
         <h1>Shop our <em>collection.</em></h1>
         <p>Explore devotional pieces and thoughtful accents for your home.</p>
       </section>

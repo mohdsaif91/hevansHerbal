@@ -25,6 +25,17 @@ import page_2_img_10 from "../assets/products/page_2_img_10.jpg"
 import page_2_img_11 from "../assets/products/page_2_img_11.png"
 import page_2_img_12 from "../assets/products/page_2_img_12.jpg"
 
+import page_3_img_1 from "../assets/products/page_3_img_1.webp"
+import page_3_img_2 from "../assets/products/page_3_img_2.webp"
+import page_3_img_3 from "../assets/products/page_3_img_3.jpg"
+import page_3_img_4 from "../assets/products/page_3_img_4.jpg"
+import page_3_img_5 from "../assets/products/page_3_img_5.jpg"
+import page_3_img_6 from "../assets/products/page_3_img_6.jpg"
+import page_3_img_7 from "../assets/products/page_3_img_7.jpg"
+import page_3_img_12 from "../assets/products/page_3_img_12.webp"
+
+
+
 const page_1_products = [
     {
         "id": "10-pack-three-kings-charcoal",
@@ -343,16 +354,14 @@ const page_2_products = [
     },
 ]
 
-export const products = [
-    ...page_1_products,
-    ...page_2_products,
+const page_3_products = [
     {
         "id": "angel-connections-message-cards",
         "slug": "angel-connections-message-cards",
         "name": "Angel Connections Message Cards",
         "price": 18.5,
         "description": "",
-        "image": "",
+        "image": page_3_img_1,
         "category": "Oracle Cards",
         "symbol": "",
         "art": "cream",
@@ -365,7 +374,7 @@ export const products = [
         "name": "Angels \u0026 Auras Oracle",
         "price": 28.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_2,
         "category": "Oracle Cards",
         "symbol": "",
         "art": "cream",
@@ -378,7 +387,7 @@ export const products = [
         "name": "Angels of Healing and Hope Oracle",
         "price": 34.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_3,
         "category": "Oracle Cards",
         "symbol": "",
         "art": "cream",
@@ -391,7 +400,7 @@ export const products = [
         "name": "Animal Guides Tarot",
         "price": 39.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_4,
         "category": "Tarot Cards",
         "symbol": "",
         "art": "cream",
@@ -404,7 +413,7 @@ export const products = [
         "name": "Anime Tarot Deck \u0026 Guidebook",
         "price": 33.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_5,
         "category": "Tarot Cards",
         "symbol": "",
         "art": "cream",
@@ -417,7 +426,7 @@ export const products = [
         "name": "Antique Anatomy Tarot Kit",
         "price": 37.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_6,
         "category": "Tarot Cards",
         "symbol": "",
         "art": "cream",
@@ -430,7 +439,7 @@ export const products = [
         "name": "Archangel Incense Cones: Haniel",
         "price": 5.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_7,
         "category": "Archangel Incense",
         "symbol": "",
         "art": "cream",
@@ -443,7 +452,7 @@ export const products = [
         "name": "Archangel Incense Cones: Raphael",
         "price": 5.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_7,
         "category": "Archangel Incense",
         "symbol": "",
         "art": "cream",
@@ -456,7 +465,7 @@ export const products = [
         "name": "Archangel Incense Cones: Raziel",
         "price": 5.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_7,
         "category": "Archangel Incense",
         "symbol": "",
         "art": "cream",
@@ -469,7 +478,7 @@ export const products = [
         "name": "Archangel Incense Cones: Raziel",
         "price": 5.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_7,
         "category": "Archangel Incense",
         "symbol": "",
         "art": "cream",
@@ -482,7 +491,7 @@ export const products = [
         "name": "Archangel Incense Cones: Uriel",
         "price": 5.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_7,
         "category": "Archangel Incense",
         "symbol": "",
         "art": "cream",
@@ -495,13 +504,19 @@ export const products = [
         "name": "Archangel Incense Sticks: Haniel",
         "price": 5.99,
         "description": "",
-        "image": "",
+        "image": page_3_img_12,
         "category": "Archangel Incense",
         "symbol": "",
         "art": "cream",
         "page": 3,
         "pagePosition": 12
     },
+]
+
+export const products = [
+    ...page_1_products,
+    ...page_2_products,
+    ...page_3_products,
     {
         "id": "archangel-incense-sticks-raziel",
         "slug": "archangel-incense-sticks-raziel",

@@ -11,8 +11,6 @@ export function ProductArtwork({ product, compact = false }) {
 }
 
 export default function ProductCard({ product, onAdd }) {
-  console.log(product.price, ' <>?');
-
   return (
     <article className="product-card">
       <Link className="product-image-link" to={`/product/${product.slug}/`} aria-label={`View ${product.name}`}>

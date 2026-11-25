@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom'
-import './App.css'
 import { products } from './data/products.js'
 import AboutPage from './pages/AboutPage.jsx'
 import AccountPage from './pages/AccountPage.jsx'
@@ -11,6 +10,8 @@ import LegalPage from './pages/LegalPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import ShopPage from './pages/ShopPage.jsx'
+
+import './App.css'
 
 const cartStorageKey = 'matrix-wellness-cart'
 const pageTitles = {
@@ -56,19 +57,25 @@ function readCart() {
 
 function SiteHeader({ cartCount }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [searchText, setSearchText] = useState('')
   const navigate = useNavigate()
+  const location = useLocation()
+  const trimmedSearch = searchText.trim().toLowerCase()
+  const suggestions = trimmedSearch.length >= 3
+    ? products.filter((product) => product.name.toLowerCase().includes(trimmedSearch))
+    : []
 
   function handleSearch(event) {
     event.preventDefault()
-    const formData = new FormData(event.currentTarget)
-    const query = String(formData.get('search') || '').trim()
+    const query = searchText.trim()
+    setSearchText('')
     navigate({ pathname: '/shop-2/', search: query ? `?search=${encodeURIComponent(query)}` : '' })
   }
 
   return (
     <header className="site-header">
-      <Link className="wordmark" to="/" aria-label="Matrix Wellness home">
-        <span>Matrix</span> <strong>Wellness</strong>
+      <Link className="wordmark" to="/" aria-label="Herbal heaven home">
+        <span>Herbal</span> <strong>heaven</strong>
       </Link>
       <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
@@ -78,10 +85,33 @@ function SiteHeader({ cartCount }) {
       </nav>
       <form className="header-search" onSubmit={handleSearch} role="search">
         <label className="sr-only" htmlFor="store-search">Search products</label>
-        <input id="store-search" type="search" name="search" placeholder="Search products" />
+        <input
+          id="store-search"
+          type="search"
+          name="search"
+          placeholder="Search products"
+          autoComplete="off"
+          value={searchText}
+          onChange={(event) => {
+            const value = event.target.value
+            setSearchText(value)
+            if (!value && location.pathname.startsWith('/shop-2') && location.search) {
+              navigate('/shop-2/')
+            }
+          }}
+        />
         <button type="submit" aria-label="Search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 5 5" /></svg>
         </button>
+        {trimmedSearch.length >= 3 && (
+          <ul className="search-suggestions">
+            {suggestions.length ? suggestions.map((product) => (
+              <li key={product.id}>
+                <Link to={`/product/${product.slug}/`} onClick={() => setSearchText('')}>{product.name}</Link>
+              </li>
+            )) : <li className="search-empty">No products found</li>}
+          </ul>
+        )}
       </form>
       <Link className="header-icon cart-link" to="/cart-3/" aria-label={`Cart, ${cartCount} items`}>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.5L21 8H6" /><circle cx="10" cy="20" r="1" /><circle cx="18" cy="20" r="1" /></svg>
@@ -108,7 +138,7 @@ function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-main">
         <div>
-          <Link className="wordmark footer-wordmark" to="/">Matrix <strong>Wellness</strong></Link>
+          <Link className="wordmark footer-wordmark" to="/">Herbal <strong>heaven</strong></Link>
           <p>Thoughtful finds for your home and everyday rituals.</p>
         </div>
         <div className="footer-links">
@@ -174,7 +204,7 @@ function App() {
     const productSlug = location.pathname.match(/^\/product\/([^/]+)/)?.[1]
     const currentProduct = products.find((product) => product.slug === productSlug)
     const currentPath = location.pathname.replace(/\/+$/, '') || '/'
-    document.title = `${pageTitles[currentPath] || currentProduct?.name || 'Page not found'} | Matrix Wellness`
+    document.title = `${pageTitles[currentPath] || currentProduct?.name || 'Page not found'} | Herbal heaven`
   }, [location.pathname])
 
   return (

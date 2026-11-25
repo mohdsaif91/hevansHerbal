@@ -15,10 +15,10 @@ export default function HomePage({ products, onAdd }) {
     <main>
       <section className="home-hero">
         <div className="hero-copy">
-          <p className="hero-kicker">Matrix Service Enterprises</p>
+          <p className="hero-kicker">Herbal heaven</p>
           <h1>Flat 25% off for grocery order</h1>
           <p className="hero-description">
-            Matrix Service Enterprises has been delivering results since we opened in 2023.
+            Herbal heaven has been delivering results since we opened in 2023.
             Our goal is to provide both a superior customer experience and tremendous value
             for our customers.
           </p>
@@ -60,7 +60,7 @@ export default function HomePage({ products, onAdd }) {
         <div>
           <p className="eyebrow">A LITTLE ABOUT US</p>
           <h2>Good finds. A more thoughtful way to shop.</h2>
-          <p>Matrix Service Enterprises has been serving customers since 2023, with a focus on a helpful experience and everyday value.</p>
+          <p>Herbal heaven has been serving customers since 2023, with a focus on a helpful experience and everyday value.</p>
           <Link className="text-link" to="/about-us-01/">Get to know us <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
